@@ -20,25 +20,6 @@ def split_before_uppercases(formula):
     return parts
 
 
-def split_before_uppercases(formula):
-    """Splits a formula before each uppercase letter.
-    Example: 'C6H12O6' → ['C6', 'H12', 'O6']"""
-    parts = []
-    current = ""
-
-    for ch in formula:
-        if ch.isupper() and current != "":
-            parts.append(current)
-            current = ch
-        else:
-            current += ch
-
-    if current:
-        parts.append(current)
-
-    return parts
-
-
 def split_at_digit(formula):
     """Splits atom name and number.
     Example: 'H2' → ('H', 2)
@@ -87,5 +68,5 @@ def parse_chemical_reaction(reaction_equation):
 
 
 def count_atoms_in_reaction(molecules_list):
-    """Returns list of atom dictionaries for molecules."""
-    return [count_atoms_in_molecule(m) for m in molecules_list]
+    """Re
+
